@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.srsofttech.studentcare"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/student"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StudentCare"
+        android:usesCleartextTraffic="false"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            >
+
+            <activity
+                android:name=".show_library.ShowLibraryActivity"
+                android:exported="false" />
+            <activity
+                android:name=".show_home_task.HomeTaskViewActivity"
+                android:exported="false"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".show_syllabus.ShowSyllabusActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".dashboard_activities.AcademicProgressActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".dashboard_activities.ClassRoutineActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".dashboard_activities.SyllabusActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".show_result.ShowResultActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".dashboard_activities.AssessmentActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".dashboard_activities.LibraryActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".assessment_activity.OnlineExamActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".dashboard_activities.HomeTaskActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".dashboard_activities.ResultActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".dashboard_activities.NoticeBoardActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".dashboard_activities.PaymentActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            <activity
+                android:name=".dashboard_activities.AttendanceActivity"
+                android:exported="true"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+
+        </activity>
+        <activity android:name=".auth.SignUpActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".auth.SignInActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
